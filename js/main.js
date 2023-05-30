@@ -1,4 +1,4 @@
-var swiper = new Swiper('.image-slider ',{
+var swiper = new Swiper('.image-slider',{
     // autoplay: {
     //     delay: 5000,
     // },
