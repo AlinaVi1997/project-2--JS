@@ -1,18 +1,18 @@
 // //btn-gallery
 function showImages() {
-  var button = document.querySelector('button');
-  var imageContainer = document.getElementById('image-container');
+  let button = document.querySelector('button');
+  let imageContainer = document.getElementById('image-container');
 
   button.style.display = 'block';
-  imageContainer.style.display = 'grid'; 
+  imageContainer.style.display = 'block'; 
 }
 
 //print text
-var text = "SIMPLE & MODERN";
-var delay = 100; 
-var elem = document.getElementById("result");
+let text = "SIMPLE & MODERN";
+let delay = 100; 
+let elem = document.getElementById("result");
  
-var print_text = function(text, elem, delay) {
+let print_text = function(text, elem, delay) {
     if(text.length > 0) {
         elem.innerHTML += text[0];
         setTimeout(
@@ -25,7 +25,7 @@ var print_text = function(text, elem, delay) {
 print_text(text, elem, delay);
 
 //swiper-slide-top
-var swiper = new Swiper('.image-slider', {
+let swiper = new Swiper('.image-slider', {
     autoplay: {
         delay: 2000,
     },
@@ -43,7 +43,7 @@ var swiper = new Swiper('.image-slider', {
 });
 
 //swiper-slider-news
-var swiper1 = new Swiper('.swiper-container-2', {
+let swiper1 = new Swiper('.swiper-container-2', {
     speed: 800,
     freeMode: true,
     autoHeight: true,
@@ -71,33 +71,55 @@ var swiper1 = new Swiper('.swiper-container-2', {
     },
 });
 
+//btn-top__scroll
+function redirectToSection() {
+  window.location.href = "#project";
+}
+
 //gallery
 Fancybox.bind('[data-fancybox]', {
 });
 
 //map
-function initMap() {
-  const myLatLng = { lat: 41.12118893425201, lng: -73.43283741633479}
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
-    center: myLatLng,
-  });
+$(document).ready(function(initMap){
+    const myLatLng = { lat: 41.12118893425201, lng: -73.43283741633479 }
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
+            center: myLatLng,
+    });
+    new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: "Monticello",
+        icon: {
+            url: "images/map__pin.svg",
+        },
+    });
+    window.initMap = initMap;
+})
 
-  new google.maps.Marker({
-    position: myLatLng,
-    map: map,
-    title: "Monticello",
-    icon: {
-        url:"images/map__pin.svg",
-    },
-  });
-}
-window.initMap = initMap;
-
-//burder-menu
+//burger-menu
 const menuBtn = document.querySelector('.menu__btn');
 const menu = document.querySelector('.header__menu');
 
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('menu--active');
 });
+
+//form
+function validateForm() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+
+  if (name === "") {
+    alert("Please enter your name.");
+    return false;
+  }
+
+  if (email === "") {
+    alert("Please enter your email.");
+    return false;
+  }
+  return true;
+}
+

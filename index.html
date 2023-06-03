@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
   <link rel="stylesheet" href="css/style.css">
@@ -20,7 +21,7 @@
         </a>
         <ul class="header__menu">
           <li class="menu__list ">
-            <a id="active-link" class="menu__link menu__list-link--active" href="#about"> ABOUT US</a>
+            <a id="active-link" class="menu__link menu__list-link--active" href="#top"> ABOUT US</a>
           </li>
           <li class="menu__list">
             <a class="menu__link" href="#project">PROJECTS</a>
@@ -120,6 +121,9 @@
         </div>
       </div>
     </div>  
+    <button class="btn-top__scroll" onclick="redirectToSection()">
+       <i class="fa-solid fa-angle-down"></i>
+    </button>
     <div class="swiper-pagination pag-1"></div>
   </section>
   <section id="project" class="project">
@@ -331,32 +335,31 @@
         <div class="gallery__title">GALLERY</div>
             <div class="gallery__grid">
                 <div class="image-container-big">
-                    <a class="gallery__img-big" href="http://127.0.0.1:5500/images/gallery-1.jpg" data-fancybox="gallery" data-caption="">
+                    <a class="gallery__img-big" href="./images/gallery-1.jpg" data-fancybox="gallery" data-caption="">
                     <img class="gallery__grid-img" src="images/gallery-1.jpg" />
                         <div class="icon-overlay">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
-                            </a>
                         </div> 
                     </a>
-                </div> 
+                </div>
                  <div class="image-container">
-                    <a href="http://127.0.0.1:5500/images/gallery-2.jpg"  data-fancybox="gallery" data-caption="">
+                    <a href="./images/gallery-2.jpg"  data-fancybox="gallery" data-caption="">
                         <img class="gallery__grid-img" src="images/gallery-2.jpg" />
                     <div class="icon-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </a>
                     </div>
-                </div>
+                    </a>
+                </div>  
                 <div class="image-container">
-                <a href="http://127.0.0.1:5500/images/gallery-3.jpg" data-fancybox="gallery" data-caption="">
+                <a href="./images/gallery-3.jpg" data-fancybox="gallery" data-caption="">
                     <img class="gallery__grid-img" src="images/gallery-3.jpg" />
                 <div class="icon-overlay">
                     <i class="fa-solid fa-magnifying-glass-plus"></i>
-                    </a>
-                </div>
+                     </div>
+                </a>
                 </div>
                 <div class="image-container">
-                <a href="http://127.0.0.1:5500/images/gallery-4.jpg" data-fancybox="gallery" data-caption="">
+                <a href="./images/gallery-4.jpg" data-fancybox="gallery" data-caption="">
                     <img class="gallery__grid-img" src="images/gallery-4.jpg" />
                     <div class="icon-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -364,7 +367,7 @@
                 </a>
                 </div>
                 <div class="image-container">
-                    <a href="http://127.0.0.1:5500/images/gallery-5.jpg" data-fancybox="gallery" data-caption="">
+                    <a href="./images/gallery-5.jpg" data-fancybox="gallery" data-caption="">
                     <img class="gallery__grid-img" src="images/gallery-5.jpg" />
                     <div class="icon-overlay">
                         <i class="fa-solid fa-magnifying-glass-plus"></i>
@@ -372,13 +375,49 @@
                     </a>
                 </div>
             </div>
-        <div class="image-container" id="image-container">
-            <img src="images/gallery-6.jpg" alt="image">
-            <img src="images/gallery-7.jpg" alt="image">
-            <img class="img" src="images/gallery-1.jpg" alt="image">
-            <img src="images/gallery-8.jpg" alt="image">
-            <img src="images/gallery-9.jpg" alt="image">
-        </div>
+            <div class="gallery__grid" id="image-container">
+                <div class="image-container-big">
+                    <a class="gallery__img-big" href="./images/gallery-1.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-1.jpg" />
+                        <div class="icon-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </div> 
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="./images/gallery-6.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-6.jpg" />
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="./images/gallery-7.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-7.jpg" />
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="./images/gallery-3.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-3.jpg" />
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    </a>
+                </div>
+                <div class="image-container">
+                    <a href="./images/gallery-8.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-8.jpg" />
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    </a>
+                </div>
+    
+            </div>
         <button class="gallery__btn" onclick="showImages()" >SEE MORE</button>
       </div>
     </div>
@@ -415,11 +454,11 @@
                 From 07:05AM to 19:30PM
               </div>
             </div>
-            <form class="contact__form">
-              <input class="form__input" type="text" placeholder="Name">
-              <input class="form__input" type="text" placeholder="Email">
-              <button class="contact__btn" type="submit">SUBMIT</button>
-            </form>
+            <form class="contact__form" id="myForm" onsubmit="return validateForm()">
+                <input class="form__input"  type="text"placeholder="Name" id="name" required>
+                 <input class="form__input"  type="email" placeholder="Mail" id="email" required>
+                <button class="contact__btn" type="submit">SUBMIT</button>
+                </form>
           </div>
         </div>
       </div>
@@ -456,6 +495,7 @@
     </div>
   </div>
 </footer> 
+
   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script src="https://kit.fontawesome.com/6ab1047ac0.js" crossorigin="anonymous"></script>

@@ -24,6 +24,7 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -215,6 +216,19 @@ body {
 }
 .top .pag-1 .swiper-pagination-bullet-active {
   background: #fff;
+}
+.top .btn-top__scroll {
+  position: absolute;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  z-index: 3;
+  bottom: 40px;
+  padding: 10px 12px;
+  left: 50%;
+}
+.top .fa-angle-down {
+  color: white;
 }
 
 .project {
@@ -530,7 +544,6 @@ body {
 }
 .gallery .img {
   grid-row: 3/-3;
-  height: 100%;
 }
 
 #image-container {
