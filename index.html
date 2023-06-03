@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
   <link rel="stylesheet" href="css/style.css">
   <title>Monticello</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </head>
 <body>
 <header class="header">
   <div class="container">
     <div class="header__inner">
       <nav class="nav">
-        <a class="logo" href="#">
+        <a class="logo"  href="#">
           <img src="images/header__logo.svg" alt="images">
         </a>
         <ul class="header__menu">
-          <li class="menu__list">
-            <a class="menu__link menu__link--active" href="#about"> ABOUT US</a>
+          <li class="menu__list ">
+            <a id="active-link" class="menu__link menu__list-link--active" href="#about"> ABOUT US</a>
           </li>
           <li class="menu__list">
             <a class="menu__link" href="#project">PROJECTS</a>
@@ -49,30 +49,78 @@
             </a>
           </li>
         </ul>
+        <button class="menu__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
       </nav>
     </div>
   </div>
   </div>
 </header>
-<main class="main">
+ <main class="main">
   <section id="top" class="top">
     <div class="swiper image-slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img class="swiper-slider-img" src="images/top__swiper-slider.jpg" alt="images">
-          <h2>Text</h2>
+          <div class="swiper__slider-top-text">
+          <div class="top__title">
+            <div id="result"></div>
+          </div>
+          <div class="top__subtitle">
+            WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+          </div>
+          </div>
         </div>
         <div class="swiper-slide">
-          <img class="swiper-slider-img" src="images/top__swiper-slider.jpg" alt="images">
-          <h2>Text</h2>
+          <img class="swiper-slider-img" src="images/top__swiper-slider-2.jpg" alt="images">
+            <div class="swiper__slider-top-text">
+          <div class="top__title">
+            MODERN & SIMPLE
+          </div>
+          <div class="top__subtitle">
+            WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+          </div>
+        </div>
         </div>
         <div class="swiper-slide">
+          <img class="swiper-slider-img" src="images/top__swiper-slider-3.jpg" alt="images">
+           <div class="swiper__slider-top-text">
+          <div class="top__title">
+            SIMPLE & MODERN
+          </div>
+          <div class="top__subtitle">
+            WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+          </div>
+        </div>
+      </div>  
+        <div class="swiper-slide">
           <img class="swiper-slider-img" src="images/top__swiper-slider.jpg" alt="images">
-          <h2>Text</h2>
+           <div class="swiper__slider-top-text">
+          <div class="top__title">
+            SIMPLE & MODERN
+          </div>
+          <div class="top__subtitle">
+            WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+          </div>
+        </div>
+      </div>  
+        <div class="swiper-slide">
+          <img class="swiper-slider-img" src="images/top__swiper-slider.jpg" alt="images">
+           <div class="swiper__slider-top-text">
+          <div class="top__title">
+            SIMPLE & MODERN
+          </div>
+          <div class="top__subtitle">
+            WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+          </div>
+        </div>
         </div>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
+    </div>  
+    <div class="swiper-pagination pag-1"></div>
   </section>
   <section id="project" class="project">
     <div class="container">
@@ -96,11 +144,11 @@
         </div>
         <div class="project__bottom">
           <div class="top__grid top__grid-bottom">
-            <img class="progect-img" src="images/project2.jpg" alt="images">
+            <img class="project-img" src="images/project2.jpg" alt="images">
             <div class="top__grid-box">
               <div class="top__grid-subtitle">INTERNATIONAL</div>
               <div class="top__grid-title">COMMERCE CENTRE</div>
-              <div class="top__grid-info">ISuccessful businesses have many things in common, today we’ll look at the big
+              <div class="top__grid-info">Successful businesses have many things in common, today we’ll look at the big
                 ‘R’ of recognition and how a digital advertising network may help.
               </div>
               <button class="top__grid-btn">MORE DETAILS</button>
@@ -113,55 +161,59 @@
   </section>
   <section id="news" class="news">
     <div class="container">
-      <div class="news__inner">
-        <h1 class="news__title">LATEST NEWS</h1>
+    <h1 class="news__title">LATEST NEWS</h1>
+    <div class="swiper swiper-container-2">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="swiper-slider__item">
-              <img class="item-img" src="images/item-1.jpg" alt="images">
-              <div class="item__info">
-                <div class="item__title">
-                  SEE THE UNMATCHED BEAUTY OF THE GREAT.
+            <div class="swiper-slide">
+                <div class="swiper-slider__item">
+                    <img class="item-img" src="images/item-1.jpg" alt="images">
+                    <div class="item__info">
+                        <div class="item__title">
+                            SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                        </div>
+                        <div class="item__subtitle">
+                            Free directories: directories are perfect for customers that are searching for...
+                        </div>
+                        <div class="item__person">
+                            <img class="item__person-avatar" src="images/author-1.jpg" alt="images">
+                            <div class="item__person-info">
+                                <a class="item__person-author-link" href="#">
+                                    <div class="item__person-author">ALJA BRUN</div>
+                                </a>
+                                <p class="item__person-date">20 Jan 2020</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="item__subtitle">
-                  Free directories: directories are perfect for customers that are searching for...
-                </div>
-                <div class="item__person">
-                  <img class="item__person-avatar" src="images/author-1.jpg" alt="images">
-                  <div class="item__person-info">
-                    <a class="item__person-author-link" href="#">
-                      <div class="item__person-author">ALJA BRUN</div>
-                    </a>
-                    <p class="item__person-date">20 Jan 2020</p>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="swiper-slider__item">
-              <img class="item-img" src="images/item2.jpg" alt="images">
-              <div class="item__info">
-                <div class="item__title">
-                  EFFECTIVE ADVERTISING POINTERS.
-                </div>
+            <div class="swiper-slide">
+                <div class="swiper-slider__item">
+                    <img class="item-img" src="images/item2.jpg" alt="images">
+                    <div class="item__info">
+                    <div class="item__title">
+                        EFFECTIVE ADVERTISING POINTERS.
+                    </div>
                 <div class="item__subtitle">
-                  Having a home based business is a wonderful asset to your life...
+                    Having a home based business is a wonderful asset to your life...
                 </div>
                 <div class="item__person">
-                  <img class="item__person-avatar" src="images/author-2.jpg" alt="images">
-                  <div class="item__person-info">
+                    <img class="item__person-avatar" src="images/author-2.jpg" alt="images">
+                    <div class="item__person-info">
                     <a class="item__person-author-link" href="#">
-                      <div class="item__person-author">DOMINIC FREEMAN</div>
+                        <div class="item__person-author">DOMINIC FREEMAN</div>
                     </a>
                     <p class="item__person-date">13 Dec 2019</p>
                   </div>
                 </div>
-              </div>
             </div>
+            </div>
+            </div>  
+        <div class="swiper-slide">
             <div class="swiper-slider__item">
-              <img class="item-img" src="images/item3.jpg" alt="images">
-              <div class="item__info">
-                <div class="item__title">
-                  HYPNOTIZE YOURSELF INTO THE GHOST.
+                <img class="item-img" src="images/item3.jpg" alt="images">
+                <div class="item__info">
+                    <div class="item__title">
+                        HYPNOTIZE YOURSELF INTO THE GHOST.
                 </div>
                 <div class="item__subtitle">
                   There are many things that are important to catalog design...
@@ -170,30 +222,164 @@
                   <img class="item__person-avatar" src="images/author-3.jpg" alt="images">
                   <div class="item__person-info">
                     <a class="item__person-author-link" href="#">
-                      <div class="item__person-author">ALICE WARD</div>
+                        <div class="item__person-author">ALICE WARD</div>
                     </a>
                     <p class="item__person-date">30 Nov 2019</p>
-                  </div>
                 </div>
+            </div>
               </div>
             </div>
-          </div>
         </div>
-      </div>
+        <div class="swiper-slide">
+                <div class="swiper-slider__item">
+                    <img class="item-img" src="images/item4.jpg" alt="images">
+                    <div class="item__info">
+                        <div class="item__title">
+                            SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                        </div>
+                        <div class="item__subtitle">
+                            Free directories: directories are perfect for customers that are searching for...
+                        </div>
+                        <div class="item__person">
+                            <img class="item__person-avatar" src="images/author-1.jpg" alt="images">
+                            <div class="item__person-info">
+                                <a class="item__person-author-link" href="#">
+                                    <div class="item__person-author">ALJA BRUN</div>
+                                </a>
+                                <p class="item__person-date">20 Jan 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="swiper-slide">
+                <div class="swiper-slider__item">
+                    <img class="item-img" src="images/item5.jpg" alt="images">
+                    <div class="item__info">
+                    <div class="item__title">
+                        EFFECTIVE ADVERTISING POINTERS.
+                    </div>
+                <div class="item__subtitle">
+                    Having a home based business is a wonderful asset to your life...
+                </div>
+                <div class="item__person">
+                    <img class="item__person-avatar" src="images/author-2.jpg" alt="images">
+                    <div class="item__person-info">
+                    <a class="item__person-author-link" href="#">
+                        <div class="item__person-author">DOMINIC FREEMAN</div>
+                    </a>
+                    <p class="item__person-date">13 Dec 2019</p>
+                  </div>
+                </div>
+            </div>
+            </div>
+        </div>  
+        <div class="swiper-slide">
+            <div class="swiper-slider__item">
+                <img class="item-img" src="images/item3.jpg" alt="images">
+                <div class="item__info">
+                    <div class="item__title">
+                        HYPNOTIZE YOURSELF INTO THE GHOST.
+                </div>
+                <div class="item__subtitle">
+                  There are many things that are important to catalog design...
+                </div>
+                <div class="item__person">
+                  <img class="item__person-avatar" src="images/author-3.jpg" alt="images">
+                  <div class="item__person-info">
+                    <a class="item__person-author-link" href="#">
+                        <div class="item__person-author">ALICE WARD</div>
+                    </a>
+                    <p class="item__person-date">30 Nov 2019</p>
+                </div>
+            </div>
+              </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+                <div class="swiper-slider__item">
+                    <img class="item-img" src="images/item4.jpg" alt="images">
+                    <div class="item__info">
+                        <div class="item__title">
+                            SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                        </div>
+                        <div class="item__subtitle">
+                            Free directories: directories are perfect for customers that are searching for...
+                        </div>
+                        <div class="item__person">
+                            <img class="item__person-avatar" src="images/author-1.jpg" alt="images">
+                            <div class="item__person-info">
+                                <a class="item__person-author-link" href="#">
+                                    <div class="item__person-author">ALJA BRUN</div>
+                                </a>
+                                <p class="item__person-date">20 Jan 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
     </div>
+</div>
+    <button class="swiper-button-prev"></button>
+    <button class="swiper-button-next"></button>
+    <div class="swiper-pagination pag-2"></div>
+</div>
   </section>
   <section id="gallery" class="gallery">
     <div class="container">
       <div class="gallery__inner">
         <div class="gallery__title">GALLERY</div>
-        <div class="gallery__grid">
-          <img class="gallery__img gallerty__img-big" src="images/gallery-1.jpg" alt="">
-          <img class="gallery__img" src="images/gallery-2.jpg" alt="">
-          <img class="gallery__img" src="images/gallery-3.jpg" alt="">
-          <img class="gallery__img" src="images/gallery-4.jpg" alt="">
-          <img class="gallery__img" src="images/gallery-5.jpg" alt="">
+            <div class="gallery__grid">
+                <div class="image-container-big">
+                    <a class="gallery__img-big" href="http://127.0.0.1:5500/images/gallery-1.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-1.jpg" />
+                        <div class="icon-overlay">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div> 
+                    </a>
+                </div> 
+                 <div class="image-container">
+                    <a href="http://127.0.0.1:5500/images/gallery-2.jpg"  data-fancybox="gallery" data-caption="">
+                        <img class="gallery__grid-img" src="images/gallery-2.jpg" />
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="image-container">
+                <a href="http://127.0.0.1:5500/images/gallery-3.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-3.jpg" />
+                <div class="icon-overlay">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </a>
+                </div>
+                </div>
+                <div class="image-container">
+                <a href="http://127.0.0.1:5500/images/gallery-4.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-4.jpg" />
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                </a>
+                </div>
+                <div class="image-container">
+                    <a href="http://127.0.0.1:5500/images/gallery-5.jpg" data-fancybox="gallery" data-caption="">
+                    <img class="gallery__grid-img" src="images/gallery-5.jpg" />
+                    <div class="icon-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        <div class="image-container" id="image-container">
+            <img src="images/gallery-6.jpg" alt="image">
+            <img src="images/gallery-7.jpg" alt="image">
+            <img class="img" src="images/gallery-1.jpg" alt="image">
+            <img src="images/gallery-8.jpg" alt="image">
+            <img src="images/gallery-9.jpg" alt="image">
         </div>
-        <button class="gallery__btn">SEE MORE</button>
+        <button class="gallery__btn" onclick="showImages()" >SEE MORE</button>
       </div>
     </div>
   </section>
@@ -240,7 +426,7 @@
     </div>
     </div>
   </section>
-</main>
+</main> 
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -269,9 +455,10 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script src="https://kit.fontawesome.com/6ab1047ac0.js" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
